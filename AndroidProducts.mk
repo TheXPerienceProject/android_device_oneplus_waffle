@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/yaap_waffle.mk
+    $(LOCAL_DIR)/xperience_waffle.mk
 
 COMMON_LUNCH_CHOICES := \
-    yaap_waffle-user \
-    yaap_waffle-userdebug \
-    yaap_waffle-eng
+    xperience_waffle-user \
+    xperience_waffle-userdebug \
+    xperience_waffle-eng
