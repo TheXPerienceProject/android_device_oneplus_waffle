@@ -11,10 +11,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from waffle device
 $(call inherit-product, device/oneplus/waffle/device.mk)
 
-# Inherit some common YAAP stuff.
-$(call inherit-product, vendor/yaap/config/common_full_phone.mk)
+# Inherit some common XPerience stuff.
+$(call inherit-product, vendor/xperience/config/common.mk)
 
-PRODUCT_NAME := yaap_waffle
+PRODUCT_NAME := xperience_waffle
 PRODUCT_DEVICE := waffle
 PRODUCT_MANUFACTURER := OnePlus
 PRODUCT_BRAND := OnePlus
@@ -37,3 +37,9 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     SystemName=CPH2581
 
 PRODUCT_GMS_CLIENTID_BASE := android-oneplus
+
+TARGET_HAS_UDFPS := true
+XPERIENCE_MAINTAINER := Kισżż
+#XPERIENCE_CHIPSET := "Snapdragon® 8+ Gen 1 Mobile Platform"
+XPERIENCE_BATTERY := 5400mah (TYP)
+XPERIENCE_DISPLAY := 1440*3168
