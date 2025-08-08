@@ -11,11 +11,15 @@ PRODUCT_AAPT_PREF_CONFIG := xxxhdpi
 # Audio
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_pineapple/mixer_paths_pineapple_mtp.xml \
-    $(LOCAL_PATH)/audio/resourcemanager.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_pineapple/resourcemanager_pineapple_mtp.xml
+    $(LOCAL_PATH)/audio/resourcemanager.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_pineapple/resourcemanager_pineapple_mtp.xml \
+    $(LOCAL_PATH)/audio/usecaseKvManager.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usecaseKvManager.xml
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2376
 TARGET_SCREEN_WIDTH := 1080
+
+# Camera
+$(call soong_config_set,cameraservice,disable_torch_control,true)
 
 # DisplayConfig
 PRODUCT_COPY_FILES += \
