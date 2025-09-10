@@ -42,4 +42,7 @@
           <item>4095,0</item>
     </string-array>
 
+    <!-- UDFPS anim size -->
+    <dimen name="udfps_animation_size">200dp</dimen>
+    <dimen name="udfps_animation_offset">12dp</dimen>
 </resources>
