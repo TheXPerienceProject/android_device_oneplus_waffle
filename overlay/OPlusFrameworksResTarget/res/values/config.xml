@@ -386,4 +386,7 @@
          -->
     <bool name="config_fillMainBuiltInDisplayCutout">true</bool>
 
+     <!-- Fingerprint from stock ROM -->
+     <string name="config_stockFingerprint" translatable="false">OnePlus/PJD110/OP5929L1:15/AP3A.240617.008/U.1b6195b_1-32768:user/release-keys</string>
+
 </resources>
