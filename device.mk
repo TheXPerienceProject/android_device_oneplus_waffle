@@ -19,8 +19,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml
 
 # Boot animation
-TARGET_SCREEN_HEIGHT := 2376
-TARGET_SCREEN_WIDTH := 1080
+TARGET_SCREEN_HEIGHT := 3120
+TARGET_SCREEN_WIDTH := 1440
 
 # Camera
 $(call soong_config_set,libbinder,binder_vm_size_4mb,true)
