@@ -2394,3 +2394,7 @@ odm/etc/wifi/kiwi/bdwlan.b0c
 odm/etc/wifi/kiwi/bdwlan.b0e
 odm/etc/wifi/kiwi/bdwlan.elf
 odm/etc/wifi/kiwi/regdb.bin
+
+# Camera
+vendor/lib64/libutils.so:vendor/lib64/libutils-stock.so;FIX_SONAME
+vendor/lib64/libui.so:vendor/lib64/libui-stock.so;FIX_SONAME
