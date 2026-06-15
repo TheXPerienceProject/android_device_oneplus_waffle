@@ -105,6 +105,7 @@ extern "C" __attribute__((visibility("hidden"))) void* aps_real_arc = nullptr;
 extern "C" __attribute__((visibility("hidden"))) void aps_repair_structs(void* a1, void* a2, void* a3) {
     repair_struct(a1); repair_struct(a2); repair_struct(a3);
 }
+
 extern "C" void wrap_arc();   // defined in asm below; what we hand back from dlsym
 __asm__(
 "    .text\n"
@@ -112,6 +113,7 @@ __asm__(
 "    .global wrap_arc\n"
 "    .type wrap_arc, %function\n"
 "wrap_arc:\n"
+"    bti c\n"                         // Added: BTI landing pad for indirect jumps
 "    stp x29, x30, [sp, #-0x60]!\n"   // our frame; sp moves DOWN, caller's stack args stay above
 "    mov x29, sp\n"
 "    stp x0, x1, [sp, #0x10]\n"       // save arg regs x0..x7
@@ -150,6 +152,7 @@ static void* wrap_dlsym(void* handle, const char* symbol) {
 typedef void (*p010_t)(uint16_t*, uint16_t*, uint32_t, uint32_t, uint32_t, uint32_t);
 static p010_t g_real_p010 = nullptr;
 static void wrap_p010(uint16_t* dst, uint16_t* src, uint32_t w2, uint32_t w3, uint32_t w4, uint32_t w5) {
+    asm volatile("bti c"); // Added: BTI landing pad for indirect jump
     if (w4 > 0) {
         uint64_t sb, ss;
         if (range_of((uint64_t)src, &sb, &ss)) {

@@ -15,6 +15,7 @@ cc_library_shared {
         "-Wno-unused-parameter",
         "-fno-exceptions",
         "-fno-rtti",
+        "-mbranch-protection=standard",
     ],
     // keep symbols for logcat triage of the GOT-hook install.
     strip: {
