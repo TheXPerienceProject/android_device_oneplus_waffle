@@ -143,12 +143,12 @@
     <!-- Screen brightness used to dim the screen when the user activity
          timeout expires.  May be less than the minimum allowed brightness setting
          that can be set by the user. -->
-    <item type="dimen" name="config_screenBrightnessDimFloat">0.00058599472</item>
+    <item type="dimen" name="config_screenBrightnessDimFloat">0.13334</item>
 
     <!-- Screen brightness used to dim the screen while dozing in a very low power state.
          May be less than the minimum allowed brightness setting
          that can be set by the user. -->
-    <item type="dimen" name="config_screenBrightnessDozeFloat">0.00058599472</item>
+    <item type="dimen" name="config_screenBrightnessDozeFloat">0.13334</item>
 
     <!-- Default screen brightness setting set.
          -2 is invalid so setting will resort to int value specified above.
