@@ -1,2 +1,9 @@
-
+# Chipset
 ro.xpe.chipset=Snapdragon® 8 Gen 3
+
+# Device / Market Name
+ro.product.marketname=OnePlus 12
+
+# XPerience Camera props
+ro.device.front_cam=32MP
+ro.device.rear_cam=50MP+64MP+48MP
